@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>dotnet-IMDBScraper.Worker-ACC7B932-0DD7-4208-99FE-2D402B1A82EB</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AngleSharp" Version="0.14.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="3.1.8" />
+    <PackageReference Include="System.Threading.Tasks" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\IMDBScraper.DAL\IMDBScraper.DAL.csproj" />
+    <ProjectReference Include="..\IMDBScraper.Shared\IMDBScraper.Shared.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,25 @@
+.actor-img{
+    height: 150px;
+}
+
+.card-header{
+    text-align: center;
+}
+.actor-table {
+    width: 90%;
+    text-align: center;
+
+    td{
+        border: black 1px solid;
+
+        &.actor-name{
+            font-weight: bold;
+        }
+    }
+    th {
+        font: bold;
+        font-size: 150%;
+    }
+
+
+}
