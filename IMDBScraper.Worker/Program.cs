@@ -52,7 +52,7 @@ namespace IMDBScraper.Worker
 
                     var taskEnginelogger = loggerFactory.CreateLogger<IMDBScraperService>();
 
-                    services.AddTransient<IIMDBScraperService>(provider => new IMDBScraperService(baseURL, actorsURL, taskEnginelogger, appConfig.MaxHTTPCalled));
+                    services.AddTransient<IIMDBScraperService>(provider => new IMDBScraperService(baseURL, actorsURL, taskEnginelogger, appConfig.m));
 
      
                     services.AddHostedService<Worker>();
