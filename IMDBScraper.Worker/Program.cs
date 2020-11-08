@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using IMDBScraper.DAL.MongoRepository;
 using IMDBScraper.DAL.Repository;
+using IMDBScraper.Worker.Configs;
 using IMDBScraper.Worker.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -24,6 +25,9 @@ namespace IMDBScraper.Worker
                 .ConfigureServices((hostContext, services) =>
                 {
                     IConfiguration configuration = hostContext.Configuration;
+                    var appSection = configuration.GetSection("AppSetting");
+                    var appConfig = new AppSetting();
+                    appSection.Bind(appConfig);
 
                     /* *** [Logger settings] *** */
                     var loggerFactory = LoggerFactory.Create(builder =>
@@ -48,7 +52,7 @@ namespace IMDBScraper.Worker
 
                     var taskEnginelogger = loggerFactory.CreateLogger<IMDBScraperService>();
 
-                    services.AddTransient<IIMDBScraperService>(provider => new IMDBScraperService(baseURL, actorsURL, taskEnginelogger));
+                    services.AddTransient<IIMDBScraperService>(provider => new IMDBScraperService(baseURL, actorsURL, taskEnginelogger, appConfig.MaxHTTPCalled));
 
      
                     services.AddHostedService<Worker>();

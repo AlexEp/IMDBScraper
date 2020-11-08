@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30517.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IMDBScraper.API", "IMDBScraper.API.csproj", "{882C50C9-9F5A-4A00-BA3D-E05ECCA3B152}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IMDBScraper.API", "IMDBScraper.API\IMDBScraper.API.csproj", "{882C50C9-9F5A-4A00-BA3D-E05ECCA3B152}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IMDBScraper.Shared", "..\IMDBScraper.Shared\IMDBScraper.Shared.csproj", "{36B7B5D2-2F15-48D2-96B1-B578BF9E7DE0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IMDBScraper.Shared", "IMDBScraper.Shared\IMDBScraper.Shared.csproj", "{36B7B5D2-2F15-48D2-96B1-B578BF9E7DE0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IMDBScraper.Worker", "..\IMDBScraper.Worker\IMDBScraper.Worker.csproj", "{40D69A95-4BA1-47C6-8AC6-6BB7E81BDBB8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IMDBScraper.Worker", "IMDBScraper.Worker\IMDBScraper.Worker.csproj", "{40D69A95-4BA1-47C6-8AC6-6BB7E81BDBB8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IMDBScraper.DAL", "..\IMDBScraper.DAL\IMDBScraper.DAL.csproj", "{25BA210C-2DA5-445A-A8D8-50C7538F6ECA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IMDBScraper.DAL", "IMDBScraper.DAL\IMDBScraper.DAL.csproj", "{25BA210C-2DA5-445A-A8D8-50C7538F6ECA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3422CB03-587B-4E4C-A5BE-26A91C7F00DA}"
 EndProject
