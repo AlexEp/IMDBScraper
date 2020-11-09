@@ -31,7 +31,7 @@ namespace IMDBScraper.API.Controllers
             }
             catch (System.Exception exp)
             {
-                _logger.LogError("Error: Get Actors", exp);
+                _logger.LogError("Error: Get Actors. {@exeption}", exp.Message);
             }
 
             return Ok(actors);
@@ -46,7 +46,7 @@ namespace IMDBScraper.API.Controllers
             }
             catch (System.Exception exp)
             {
-                _logger.LogError($"Error: Hide actorID: {actorID}", exp);
+                _logger.LogError("Error: Hide actorID: {@actorID}. {@exeption}", actorID, exp.Message);
                 return BadRequest();
             }
             return new JsonResult(actorID);
@@ -61,7 +61,7 @@ namespace IMDBScraper.API.Controllers
             }
             catch (System.Exception exp)
             {
-                _logger.LogError($"Error: UnHideAllAsync :", exp);
+                _logger.LogError("Error, UnHideAllAsync: {@exeption}.", exp.Message);
                 return BadRequest();
             }
             return Ok();
