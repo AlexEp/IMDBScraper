@@ -28,15 +28,15 @@ services:
     depends_on:
       - mongo
 
-  scraper-api:
-    build: ./IMDBScraper.API
-    restart: always
-    ports:
-      - 5000:80
-    depends_on:
-      - mongo
-    networks:
-      - imdb-scraper-network
+  # scraper-api:
+    # build: ./IMDBScraper.API
+    # restart: always
+    # ports:
+      # - 5000:80
+    # depends_on:
+      # - mongo
+    # networks:
+      # - imdb-scraper-network
 
 networks:
   imdb-scraper-network:
