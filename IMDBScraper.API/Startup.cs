@@ -2,6 +2,7 @@ using IMDBScraper.API.Configs;
 using IMDBScraper.DAL.MongoRepository;
 using IMDBScraper.DAL.Repository;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -68,6 +69,8 @@ namespace IMDBScraper.API
             }
 
 
+
+            app.UseExceptionHandler("/error"); // Add this
             app.UseHttpsRedirection();
 
             app.UseSwagger();
