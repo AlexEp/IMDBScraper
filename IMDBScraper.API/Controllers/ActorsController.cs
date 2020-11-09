@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using IMDBScraper.DAL.Repository;
@@ -24,7 +25,6 @@ namespace IMDBScraper.API.Controllers
         public async Task<IActionResult> Get()
         {
             IEnumerable<IMDBScraper.Shared.DTO.Actor> actors = new List<IMDBScraper.Shared.DTO.Actor>(0);
-
             try
             {
                  actors = await _actorRepository.GetAllUnHidedAsync().ConfigureAwait(false);
