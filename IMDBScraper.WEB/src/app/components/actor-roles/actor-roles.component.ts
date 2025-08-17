@@ -1,9 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-actor-roles',
-  templateUrl: './actor-roles.component.html',
-  styleUrls: ['./actor-roles.component.scss']
+    selector: 'app-actor-roles',
+    templateUrl: './actor-roles.component.html',
+    styleUrls: ['./actor-roles.component.scss'],
+    standalone: false
 })
 export class ActorRolesComponent implements OnInit {
 

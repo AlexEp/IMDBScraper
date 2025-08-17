@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { ActorViewComponent } from './actor-view.component';
 
@@ -6,7 +6,7 @@ describe('ActorViewComponent', () => {
   let component: ActorViewComponent;
   let fixture: ComponentFixture<ActorViewComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ ActorViewComponent ]
     })
